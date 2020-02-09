@@ -4,4 +4,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm install` and then `ng serve` to startup the dev server. Navigate to `http://localhost:4200/`.
+Run `npm install` and then `npm run start` to startup the dev server. Navigate to `http://localhost:4200/`.
