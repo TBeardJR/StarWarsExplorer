@@ -1,0 +1,27 @@
+h1 {
+  color: yellow;
+  margin-left: 10px;
+}
+
+section h3 {
+  color: yellow;
+  margin-left: 10px;
+}
+
+section p {
+  color: rgb(200, 200, 200);
+  margin-left: 40px;
+}
+
+main {
+  padding-top: 60px;
+}
+
+.property-name {
+  font-weight: bold
+}
+
+a {
+  color: hotpink;
+}
+

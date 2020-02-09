@@ -1,0 +1,24 @@
+<main infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="loadMoreData()">
+  <h1>{{pageName}}</h1>
+  <section *ngFor="let result of results">
+    <h3>{{result.name ? result.name : result.title}}</h3>
+    <p class="property-value" *ngFor="let propertyName of objectKeys(result)">
+      <span *ngIf="propertyName !== 'title' && propertyName !== 'name'" class="property-name">{{propertyName}}: </span>
+      <ng-container *ngIf="isNotArray(result[propertyName]) else list">
+        <ng-container *ngIf="!isLink(result[propertyName]) else link">{{propertyName === 'title' || propertyName === 'name' ? null : result[propertyName]}}</ng-container>
+        <ng-template #link><a [routerLink]="setRouteLink(result[propertyName])">{{result[propertyName]}}</a></ng-template>
+      </ng-container>
+      <ng-template #list>
+        <ul>
+          <li *ngFor="let value of result[propertyName]">
+            <ng-container *ngIf="!isLink(value) else link2">{{value}}</ng-container>
+            <ng-template #link2><a [routerLink]="setRouteLink(value)">{{value}}</a></ng-template>
+          </li>
+        </ul>
+      </ng-template>
+    </p>
+  </section>
+</main>

@@ -1,0 +1,13 @@
+h1 {
+  height: 100%;
+  color: yellow;
+  text-align: center;
+  transform: translate(0%, 15%);
+}
+
+h3 {
+  height: 100%;
+  color: yellow;
+  text-align: center;
+  transform: translate(0%, -80%);
+}
